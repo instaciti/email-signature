@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Business Card</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .mainWrapper {
+            display: flex;
+            margin-top: 10pt;
+        }
+
+        p {
+            color: #6d6d6d;
+            font-weight: 400;
+            font-size: 10px;
+            padding: 0;
+            margin: 0;
+        }
+
+        h2 {
+            font-size: 12pt;
+            font-weight: 600;
+        }
+
+        .cBizcardbox {
+            width: 240pt;
+            border-radius: 5pt;
+            border: 1px solid #dbdbdb;
+            padding: 10pt;
+        }
+
+        span {
+            color: #06A9FF;
+            padding-right: 3pt;
+        }
+
+        .cHashtag {
+            color: #06A9FF;
+            font-style: normal !important;
+            font-size: 8pt !important;
+        }
+
+        .topBar {
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        }
+
+        .cUserdetail {
+            flex: 0 0 58.333333%;
+            max-width: 58.333333%;
+        }
+
+        .cUserdetail p {
+            color: #06A9FF;
+            font-size: 10pt;
+            margin: 0px !important;
+        }
+
+        .cBizqr {
+            flex: 0 0 41.666667%;
+            max-width: 41.666667%;
+            text-align: right;
+        }
+
+        .cBizqr img {
+            width: 75pt;
+
+        }
+
+        .secondBar {
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+
+        .cBizaddress {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+
+        .cBizcontact {
+            flex: 0 0 50%;
+            max-width: 50%;
+            text-align: right;
+        }
+
+        .copyButton {
+            background-color: #06A9FF;
+            border: #06A9FF;
+            padding: 5px 20px;
+            color: #ffffff;
+            border-radius: 5px;
+            margin-top: 50px;
+            cursor: pointer;
+        }
+    </style>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+</head>
+
+<body>
+
+    <button type="button" id="copy-button" data-clipboard-target="#copy" class="copyButton">Copy to clipboard</button>
+
+    <div class="mainWrapper" id="copy">
+        <div class="cardLeft" >
+            <div class="cBusinesscard">
+                <div class="cBizcardbox">
+                    <div class="topBar">
+                        <div class="cUserdetail">
+                            <h2>Sidhant Sinha</h2>
+                            <p>UI/UX Designer</p>
+                        </div>
+                        <div class="cBizqr">
+                            <img src="https://p.kindpng.com/picc/s/120-1202089_qr-code-transparent-png-qr-code-png-png.png" alt="">
+                        </div>
+                    </div>
+                    <div class="secondBar">
+                        <div class="cBizaddress">
+                            <p>Gali No. 15, Gautam Colony</p>
+                            <p>Safiabad Road, Narela </p>
+                            <P>Delhi - 110040</P>
+                        </div>
+
+                        <div class="cBizcontact">
+                            <p><span>M</span> +91-8744864239</p>
+                            <p><span>E</span> heysidhant@gmail.com</p>
+                            <p><span>W</span> www.instaciti.com</p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <table style="margin-top:50px" id="copy">
+        <tr>
+          <td><h2>Sidhant Sinha</h2></td>
+          <td><div class="cBizqr">
+            <img src="https://p.kindpng.com/picc/s/120-1202089_qr-code-transparent-png-qr-code-png-png.png" alt="">
+        </div></td>
+        </tr>
+        <tr>
+          <td class="cUserdetail"><p>UI/UX Designer</p></td>
+        </tr>
+
+
+        <tr>
+            <td><p>Gali No. 15, Gautam Colony</p></td>
+            <td><p><span>M</span> +91-8744864239</p></td>
+          </tr>
+          <tr>
+            <td><p>Safiabad Road, Narela</p></td>
+            <td><p><span>E</span> heysidhant@gmail.com</p></td>
+          </tr>
+          <tr>
+            <td><p>Delhi - 110040</p></td>
+            <td><p><span>W</span> www.instaciti.com</p></td>
+          </tr>
+
+      </table> -->
+      
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <script>
+        $(function () {
+            new Clipboard('#copy-button');
+        });
+    </script>
+
+</body>
+
+</html>
