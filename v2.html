@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Email Signature</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px !important;
+        }
+
+        .mainWrapper {
+            margin-top: 10pt;
+            border-radius: 5pt;
+            border: 1px solid #dbdbdb;
+            padding: 10pt;
+            width: 300px;
+        }
+
+        p {
+            color: #6d6d6d;
+            font-weight: 400;
+            font-size: 14px;
+            padding: 0;
+            margin: 0;
+        }
+
+        h2 {
+            font-size: 16pt;
+            font-weight: 500;
+        }
+
+        span {
+            color: #06A9FF;
+            padding-right: 3pt;
+        }
+
+        .personalInfo p {
+            font-size: 16px;
+        }
+
+        .addressInfo {
+            margin-top: 10px;
+        }
+
+        .contactInfo {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .copyButton {
+            background-color: #06A9FF;
+            border: #06A9FF;
+            padding: 5px 20px;
+            color: #ffffff;
+            border-radius: 5px;
+            margin-top: 50px;
+            cursor: pointer;
+        }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+</head>
+
+<body>
+
+    <button type="button" id="copy-button" data-clipboard-target="#copy" class="copyButton">Copy to clipboard</button>
+
+    <div class="mainWrapper" id="copy">
+
+        <div class="personalInfo">
+            <h2>Ram Lal Sharma</h2>
+            <p><span>Graphic Designer</span></p>
+        </div>
+
+        <div class="addressInfo">
+            <p>Main Road, Karol Bagh, </p>
+            <p>Safiabad Road, Narela </p>
+            <P>Delhi - 110040</P>
+        </div>
+        <div class="contactInfo">
+            <p><span>M</span> +91-9876543210</p>
+            <p><span>E</span> ramlalsharma.com</p>
+            <p><span>W</span> www.instaciti.com</p>
+        </div>
+
+        <div class="qrCode">
+            <img src="https://raw.githubusercontent.com/instaciti/email-signature/main/qr-image.png" alt="">
+        </div>
+
+    </div>
+
+
+    <!-- JavaScript-->
+
+    <script>
+        $(function () {
+            new Clipboard('#copy-button');
+        });
+    </script>
+
+</body>
+
+</html>
